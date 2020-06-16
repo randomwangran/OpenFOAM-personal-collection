@@ -1,0 +1,3 @@
+[submodule "OpenFOAM-dev"]
+	path = OpenFOAM-dev
+	url = git@github.com:OpenFOAM/OpenFOAM-dev.git
