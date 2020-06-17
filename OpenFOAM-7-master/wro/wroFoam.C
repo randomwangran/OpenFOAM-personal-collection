@@ -44,7 +44,9 @@ int main(int argc, char *argv[])
 
     simpleControl simple(mesh);
 
-    #include "createFields.H"
+   #include "createFields.H"
+
+
 
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -58,14 +60,11 @@ int main(int argc, char *argv[])
         {
             fvScalarMatrix TEqn
             (
-                fvm::ddt(T) - fvm::laplacian(DT, T)
-             ==
-                fvOptions(T)
+             fvm::ddt(T)
+             == dummy_ran
             );
 
-            fvOptions.constrain(TEqn);
             TEqn.solve();
-            fvOptions.correct(T);
         }
 
         #include "write.H"

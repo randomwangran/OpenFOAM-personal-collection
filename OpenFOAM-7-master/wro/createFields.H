@@ -36,4 +36,10 @@ dimensionedScalar DT
     transportProperties.lookup("DT")
 );
 
+
+dimensionedScalar dummy_ran
+(
+    transportProperties.lookup("dummy_ran")
+ );
+
 #include "createFvOptions.H"

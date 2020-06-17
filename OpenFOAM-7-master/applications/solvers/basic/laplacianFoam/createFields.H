@@ -36,4 +36,9 @@ dimensionedScalar DT
     transportProperties.lookup("DT")
 );
 
+dimensionedScalar DO
+(
+    transportProperties.lookup("DO")
+)
+
 #include "createFvOptions.H"
